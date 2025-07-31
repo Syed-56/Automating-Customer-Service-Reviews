@@ -27,12 +27,6 @@ def classify_dealership_visit(transcript, instructions):
         time.sleep(1)
         pyautogui.hotkey("ctrl","2")
         time.sleep(2.0)
-        pyautogui.moveTo(498,667)
-        pyautogui.click()
-        time.sleep(1.0)
-        pyautogui.moveTo(581,512)
-        pyautogui.click()
-        time.sleep(1.0)
         pyautogui.moveTo(614,621)
         pyautogui.click()
         time.sleep(1.0)
@@ -141,7 +135,7 @@ with open("transcript.txt", "r", encoding="utf-8") as f:
 option_number, category = classify_dealership_visit(transcript, instructions)
 if option_number:
     print(f"🧠 Classification: [{option_number}] {category}")
-    select_option_on_screen(option_number)
+    #select_option_on_screen(option_number)
     cleanup_files()
 else:
     print("❌ Skipping due to invalid classification.")
