@@ -47,7 +47,7 @@ def classify_dealership_visit(transcript, instructions):
     pyautogui.press("enter")
     print("🧠 Prompt sent to GPT.")
     pyautogui.moveTo(575,260)
-    time.sleep(5.0)
+    time.sleep(10.0)
     pyautogui.click()
     pyautogui.click()
     pyautogui.click()
