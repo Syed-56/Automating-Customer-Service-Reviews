@@ -135,7 +135,7 @@ with open("transcript.txt", "r", encoding="utf-8") as f:
 option_number, category = classify_dealership_visit(transcript, instructions)
 if option_number:
     print(f"🧠 Classification: [{option_number}] {category}")
-    #select_option_on_screen(option_number)
+    select_option_on_screen(option_number)
     cleanup_files()
 else:
     print("❌ Skipping due to invalid classification.")
