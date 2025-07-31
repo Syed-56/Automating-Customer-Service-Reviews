@@ -2,11 +2,11 @@ import subprocess
 import time
 import os
 import requests
-import keyboard  # pip install keyboard
+import keyboard 
 import pygetwindow as gw
 import pyautogui
 
-MAX_CALLS = 5
+MAX_CALLS = 20
 call_count = 0
 
 def is_connected():

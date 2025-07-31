@@ -44,7 +44,7 @@ def scroll_and_right_click_audio(chrome):
     print("🆕 'Open link in new tab' clicked.")
     time.sleep(3.0)
     print("🧭 Simulating Ctrl+Tab to switch to newly opened tab...")
-    pyautogui.hotkey('ctrl', 'tab')
+    pyautogui.hotkey('ctrl', '2')
 
     # Move to the download audio button and click
     time.sleep(5.0)

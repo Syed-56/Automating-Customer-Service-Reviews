@@ -3,59 +3,63 @@ import pyautogui
 import pygetwindow as gw
 from pathlib import Path
 import time
+import pyperclip
 import os
 
-
-CATEGORIES = {
-    "Specific appointment or walk-in time / range within 1 hour": 1,
-    "Unscheduled walk-in or loose appointment time / range exceeding 1 hour": 2,
-    "Appointment requested / mentioned but not set": 3,
-    "No appointment, walk-in, or drop-off discussed": 4,
-    "Upcoming scheduled appointment": 5,
-    "Vehicle already in service": 6,
-    "No, not an appointment opportunity": 7,
-    "Correction: caller never connected to a live, qualified agent": 8,
-    "Unfamiliar Language": 9
+VISIT_CATEGORIES = {
+    "Yes, at a specific time or range of time within 1 hour": 1,
+    "Yes, at a loose time or range of time exceeding 1 hour": 2,
+    "No, visit requested/mentioned but no agreement": 3,
+    "No, a new visit was not discussed": 4,
+    "Correction: not an inventory sales conversation": 5,
+    "Unfamiliar Language": 6
 }
 
-def classify_service_appointment(transcript: str) -> tuple:
-    transcript = transcript.lower()
+def classify_dealership_visit(transcript, instructions):
+    # Focus ChatGPT tab and send
+    chrome_window = [w for w in gw.getWindowsWithTitle("Review") if "Chrome" in w.title]
+    if chrome_window:
+        chrome = chrome_window[0]
+        if chrome.isMinimized:
+            chrome.restore()
+        chrome.activate()
+        chrome.maximize()
+        time.sleep(1)
+        pyautogui.hotkey("ctrl","2")
+        time.sleep(2.0)
+        pyautogui.moveTo(614,621)
+        pyautogui.click()
+        time.sleep(1.0)
 
-    if re.search(r'\[unfamiliar language\]', transcript):
-        label = "Unfamiliar Language"
+    prompt = f"""You are a Humanatic QA expert.
 
-    elif any(phrase in transcript for phrase in [
-        "left on hold", "voicemail", "wrong number", 
-        "left a live message", "declined to leave a message",
-        "hung up during", "connection was lost"
-    ]):
-        label = "Correction: caller never connected to a live, qualified agent"
+    Instructions:
+    {instructions}
 
-    elif re.search(r"\b(status|update).*(vehicle|car).*(already in service|already there|being serviced)", transcript):
-        label = "Vehicle already in service"
+    Transcript:
+    \"\"\"{transcript}\"\"\"
 
-    elif re.search(r"\b(already have|existing|scheduled).*appointment", transcript):
-        label = "Upcoming scheduled appointment"
+    Please respond with the option number and category name only. DONT WRITE ANYTHING ELSE and If there is unfamiliar language, you will write Unfamiliar Language"""
+    pyperclip.copy(prompt)
+    time.sleep(1.0)
+    pyautogui.hotkey("ctrl", "v")
+    time.sleep(1)
+    pyautogui.press("enter")
+    print("🧠 Prompt sent to GPT.")
+    pyautogui.moveTo(575,260)
+    time.sleep(5.0)
+    pyautogui.click()
+    pyautogui.click()
+    pyautogui.click()
+    pyautogui.hotkey("ctrl", "c")
+    time.sleep(0.5)
+    pyautogui.hotkey("ctrl", "1")
+    time.sleep(0.5)
+    chrome.minimize()
+    copied_text = pyperclip.paste()
+    copied_text = next((line.strip() for line in copied_text.splitlines() if line.strip()), "")
 
-    elif re.search(r"\b(see you at|i'll be there at|put you down for|schedule you for|drop.*before.*appointment|come in now|within.*an hour)\b", transcript):
-        label = "Specific appointment or walk-in time / range within 1 hour"
-
-    elif re.search(r"\b(drop.*off.*day|before|after|anytime|sometime|between \d{1,2}(:\d{2})? and \d{1,2}(:\d{2})?)\b", transcript):
-        label = "Unscheduled walk-in or loose appointment time / range exceeding 1 hour"
-
-    elif re.search(r"\b(need to bring.*car|can i get an appointment|want.*appointment|how much.*service|price for)\b", transcript) and "schedule" not in transcript:
-        label = "Appointment requested / mentioned but not set"
-
-    elif re.search(r"\b(oil change|flush|how much|price|do you offer|do you do)\b", transcript) and "appointment" not in transcript:
-        label = "No appointment, walk-in, or drop-off discussed"
-
-    elif re.search(r"\b(body shop|collision|just checking|personal call|car wash|just talking|talk to someone)\b", transcript):
-        label = "No, not an appointment opportunity"
-
-    else:
-        label = "Appointment requested / mentioned but not set"  # fallback
-
-    return CATEGORIES[label], label
+    return VISIT_CATEGORIES[copied_text], copied_text
 
 def cleanup_files():
     files_to_delete = ['transcript.txt', 'audio1.mp3', 'audio1.wav']
@@ -72,7 +76,6 @@ def cleanup_files():
 def select_option_on_screen(option_number: int):
     print(f"Selecting option number: {option_number}")
 
-    # Step 1: Find the Chrome window
     chrome_windows = [w for w in gw.getWindowsWithTitle("Review") if "Chrome" in w.title]
     if not chrome_windows:
         print("❌ No Chrome window with 'Review' in title found.")
@@ -85,56 +88,62 @@ def select_option_on_screen(option_number: int):
     chrome.maximize()
     time.sleep(1.5)
 
-    # Step 2: Move mouse to scrollable area and click to focus
     pyautogui.scroll(1000)
 
-    # Step 4: Move to the first option position
-    x_start, y_start = 720, 366
+    x_start, y_start = 720, 363
     pyautogui.moveTo(x_start, y_start)
     time.sleep(0.5)
 
-    # Step 5: Navigate down to correct option
     for _ in range(option_number - 1):
         y_start += 55
         pyautogui.moveTo(x_start, y_start)
         time.sleep(0.05)
 
-    # Step 6: Special adjustment for option 9 (Unfamiliar Language)
-    if option_number == 9:
-        pyautogui.moveTo(720,366)
-        pyautogui.scroll(-1000)
-        pyautogui.moveTo(991, 479)
+    if option_number == 6:
+        pyautogui.moveTo(948, 639)
         pyautogui.click()
-        print("Unfamiliar Language.")
+        print("✅ Selected: Unfamiliar Language")
         return
 
     pyautogui.click()
     print("✅ Option selected.")
 
-    # Step 7: Slight scroll down to make submit button visible
-    pyautogui.scroll(-300)
-    time.sleep(0.5)
+    time.sleep(2.0)
 
-    # Step 8: Click Submit button (adjust if needed)
-    submit_x, submit_y = 930, 618
+    submit_x, submit_y = 931, 700
     pyautogui.moveTo(submit_x, submit_y)
     pyautogui.click()
+    time.sleep(5.0)
     print("✅ Submit clicked.")
 
     chrome_windows = [w for w in gw.getWindowsWithTitle("Review") if "Chrome" in w.title]
-    if not chrome_windows:
-        print("❌ No Chrome window with 'Review' in title found.")
-        return
+    if chrome_windows and chrome_windows[0].isMaximized:
+        chrome_windows[0].minimize()
 
-    chrome = chrome_windows[0]
-    if chrome.isMaximized:
-        chrome.minimize()
-
+# === Load files ===
+with open("instructions-dsv.txt", "r", encoding="utf-8") as f:
+    instructions = f.read()
 
 with open("transcript.txt", "r", encoding="utf-8") as f:
     transcript = f.read()
 
-option_number, category = classify_service_appointment(transcript)
-print(f"Classification: [{option_number}] {category}")
-cleanup_files()
-select_option_on_screen(option_number)
+# === Run classification ===
+option_number, category = classify_dealership_visit(transcript, instructions)
+if option_number:
+    print(f"🧠 Classification: [{option_number}] {category}")
+    select_option_on_screen(option_number)
+    cleanup_files()
+else:
+    print("❌ Skipping due to invalid classification.")
+     # Switch to Humanatic tab (title contains 'Review')
+    review_windows = [w for w in gw.getWindowsWithTitle("Review") if "Chrome" in w.title]
+    if review_windows:
+        review_windows[0].activate()
+        time.sleep(1)
+        pyautogui.press("f5")  # Refresh the page
+        time.sleep(5)  # Wait for page to reload
+    else:
+        print("⚠️ Humanatic tab not found.")
+        exit()
+    
+    cleanup_files()

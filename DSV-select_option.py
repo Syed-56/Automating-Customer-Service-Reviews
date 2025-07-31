@@ -3,6 +3,7 @@ import pyautogui
 import pygetwindow as gw
 from pathlib import Path
 import time
+import pyperclip
 import os
 
 VISIT_CATEGORIES = {
@@ -14,63 +15,51 @@ VISIT_CATEGORIES = {
     "Unfamiliar Language": 6
 }
 
-def classify_dealership_visit(transcript: str) -> tuple:
-    transcript = transcript.lower()
+def classify_dealership_visit(transcript, instructions):
+    # Focus ChatGPT tab and send
+    chrome_window = [w for w in gw.getWindowsWithTitle("Review") if "Chrome" in w.title]
+    if chrome_window:
+        chrome = chrome_window[0]
+        if chrome.isMinimized:
+            chrome.restore()
+        chrome.activate()
+        chrome.maximize()
+        time.sleep(1)
+        pyautogui.hotkey("ctrl","2")
+        time.sleep(2.0)
+        pyautogui.moveTo(614,621)
+        pyautogui.click()
+        time.sleep(1.0)
 
-    # Unfamiliar Language
-    if "[unfamiliar language]" in transcript:
-        return VISIT_CATEGORIES["Unfamiliar Language"], "Unfamiliar Language"
+    prompt = f"""You are a Humanatic QA expert.
 
-    # Correction: Not an inventory sales conversation
-    inventory_keywords = ["car", "vehicle", "truck", "test drive", "inventory", "trade", "purchase", "buy", "sell"]
-    if not any(kw in transcript for kw in inventory_keywords):
-        return VISIT_CATEGORIES["Correction: not an inventory sales conversation"], "Correction: not an inventory sales conversation"
+    Instructions:
+    {instructions}
 
-    # Time Detection
-    specific_time_patterns = [
-        r"\b(in|after|within|about|around|approximately)\s?\d{1,2} (minutes?|mins?)\b",
-        r"\b(30|45|60)\s?(minutes?|mins?)\b",
-        r"\b(?:at|around|by|before|after)\s?\d{1,2}(:\d{2})?\s?(am|pm)?\b",
-        r"\b(on my way|heading (over|your way)|be there in a few(?! hours))\b"
-    ]
+    Transcript:
+    \"\"\"{transcript}\"\"\"
 
-    loose_time_phrases = [
-        "sometime today", "this weekend", "this evening", "after work",
-        "in a few hours", "few hours", "later today", "in the afternoon",
-        "in the evening", "after lunch", "after i get off", "i’ll swing by later",
-        "i’ll be there between", "i might pass by", "after dinner"
-    ]
+    Please respond with the option number and category name only. DONT WRITE ANYTHING ELSE and If there is unfamiliar language, you will write Unfamiliar Language"""
+    pyperclip.copy(prompt)
+    time.sleep(1.0)
+    pyautogui.hotkey("ctrl", "v")
+    time.sleep(1)
+    pyautogui.press("enter")
+    print("🧠 Prompt sent to GPT.")
+    pyautogui.moveTo(575,260)
+    time.sleep(5.0)
+    pyautogui.click()
+    pyautogui.click()
+    pyautogui.click()
+    pyautogui.hotkey("ctrl", "c")
+    time.sleep(0.5)
+    pyautogui.hotkey("ctrl", "1")
+    time.sleep(0.5)
+    chrome.minimize()
+    copied_text = pyperclip.paste()
+    copied_text = next((line.strip() for line in copied_text.splitlines() if line.strip()), "")
 
-    # Intent Detection
-    definite_intent_phrases = [
-        "i'll be there", "i will come", "i’m coming", "i’m on my way", 
-        "i will stop by", "i’m heading there", "i’ll come", "i’m driving down"
-    ]
-
-    possible_intent_phrases = [
-        "maybe", "i might", "i'll try", "i may", "i’m thinking about it",
-        "if i get time", "i’ll see", "possibly", "we’ll see", "thinking of coming"
-    ]
-
-    has_specific_time = any(re.search(p, transcript) for p in specific_time_patterns)
-    has_loose_time = any(phrase in transcript for phrase in loose_time_phrases)
-    has_definite_intent = any(phrase in transcript for phrase in definite_intent_phrases)
-    has_possible_intent = any(phrase in transcript for phrase in possible_intent_phrases)
-
-    if has_specific_time and has_definite_intent:
-        return VISIT_CATEGORIES["Yes, at a specific time or range of time within 1 hour"], "Yes, at a specific time or range of time within 1 hour"
-
-    if has_loose_time and has_definite_intent:
-        return VISIT_CATEGORIES["Yes, at a loose time or range of time exceeding 1 hour"], "Yes, at a loose time or range of time exceeding 1 hour"
-
-    if (has_specific_time or has_loose_time) and has_possible_intent:
-        return VISIT_CATEGORIES["No, visit requested/mentioned but no agreement"], "No, visit requested/mentioned but no agreement"
-
-    if has_specific_time or has_loose_time:
-        return VISIT_CATEGORIES["No, visit requested/mentioned but no agreement"], "No, visit requested/mentioned but no agreement"
-
-    return VISIT_CATEGORIES["No, a new visit was not discussed"], "No, a new visit was not discussed"
-
+    return VISIT_CATEGORIES[copied_text], copied_text
 
 def cleanup_files():
     files_to_delete = ['transcript.txt', 'audio1.mp3', 'audio1.wav']
@@ -87,7 +76,6 @@ def cleanup_files():
 def select_option_on_screen(option_number: int):
     print(f"Selecting option number: {option_number}")
 
-    # Step 1: Find the Chrome window
     chrome_windows = [w for w in gw.getWindowsWithTitle("Review") if "Chrome" in w.title]
     if not chrome_windows:
         print("❌ No Chrome window with 'Review' in title found.")
@@ -100,35 +88,28 @@ def select_option_on_screen(option_number: int):
     chrome.maximize()
     time.sleep(1.5)
 
-    # Step 2: Move mouse to scrollable area and click to focus
     pyautogui.scroll(1000)
 
-    # Step 4: Move to the first option position
     x_start, y_start = 720, 363
     pyautogui.moveTo(x_start, y_start)
     time.sleep(0.5)
 
-    # Step 5: Navigate down to correct option
     for _ in range(option_number - 1):
         y_start += 55
         pyautogui.moveTo(x_start, y_start)
         time.sleep(0.05)
 
-    # Step 6: Special adjustment for option 9 (Unfamiliar Language)
     if option_number == 6:
         pyautogui.moveTo(948, 639)
         pyautogui.click()
-        print("Unfamiliar Language.")
+        print("✅ Selected: Unfamiliar Language")
         return
-        
 
     pyautogui.click()
     print("✅ Option selected.")
 
-    # Step 7: Slight scroll down to make submit button visible
     time.sleep(2.0)
 
-    # Step 8: Click Submit button (adjust if needed)
     submit_x, submit_y = 931, 700
     pyautogui.moveTo(submit_x, submit_y)
     pyautogui.click()
@@ -136,20 +117,33 @@ def select_option_on_screen(option_number: int):
     print("✅ Submit clicked.")
 
     chrome_windows = [w for w in gw.getWindowsWithTitle("Review") if "Chrome" in w.title]
-    if not chrome_windows:
-        print("❌ No Chrome window with 'Review' in title found.")
-        return
+    if chrome_windows and chrome_windows[0].isMaximized:
+        chrome_windows[0].minimize()
 
-    chrome = chrome_windows[0]
-    if chrome.isMaximized:
-        chrome.minimize()
-
+# === Load files ===
+with open("instructions-dsv.txt", "r", encoding="utf-8") as f:
+    instructions = f.read()
 
 with open("transcript.txt", "r", encoding="utf-8") as f:
     transcript = f.read()
 
-option_number, category = classify_dealership_visit(transcript)
-print(f"Classification: [{option_number}] {category}")
-cleanup_files()
-select_option_on_screen(option_number)
-time.sleep(5.0)
+# === Run classification ===
+option_number, category = classify_dealership_visit(transcript, instructions)
+if option_number:
+    print(f"🧠 Classification: [{option_number}] {category}")
+    select_option_on_screen(option_number)
+    cleanup_files()
+else:
+    print("❌ Skipping due to invalid classification.")
+     # Switch to Humanatic tab (title contains 'Review')
+    review_windows = [w for w in gw.getWindowsWithTitle("Review") if "Chrome" in w.title]
+    if review_windows:
+        review_windows[0].activate()
+        time.sleep(1)
+        pyautogui.press("f5")  # Refresh the page
+        time.sleep(5)  # Wait for page to reload
+    else:
+        print("⚠️ Humanatic tab not found.")
+        exit()
+    
+    cleanup_files()
