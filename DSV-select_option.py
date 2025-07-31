@@ -45,7 +45,10 @@ def classify_dealership_visit(transcript, instructions):
     Transcript:
     \"\"\"{transcript}\"\"\"
 
-    Please respond with the category name only. DONT WRITE ANYTHING ELSE and If there is unfamiliar language, you will write Unfamiliar Language"""
+    Select any of the options:
+    {VISIT_CATEGORIES}
+
+    Please respond with the category name only. DONT WRITE ANYTHING ELSE and only answer from given options and If there is unfamiliar language, you will write Unfamiliar Language"""
     pyperclip.copy(prompt)
     time.sleep(1.0)
     pyautogui.hotkey("ctrl", "v")
