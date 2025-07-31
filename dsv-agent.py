@@ -6,7 +6,7 @@ import keyboard
 import pygetwindow as gw
 import pyautogui
 
-MAX_CALLS = 20
+MAX_CALLS = 1
 call_count = 0
 
 def is_connected():
@@ -58,6 +58,7 @@ def return_to_main_menu():
 
     # Move and click Main Menu or any UI control
     pyautogui.moveTo(205, 114)
+    pyautogui.scroll(1000)
     pyautogui.click()
     print("🏠 Returned to Main Menu.")
 

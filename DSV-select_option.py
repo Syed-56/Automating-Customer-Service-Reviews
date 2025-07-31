@@ -39,7 +39,7 @@ def classify_dealership_visit(transcript, instructions):
     Transcript:
     \"\"\"{transcript}\"\"\"
 
-    Please respond with the option number and category name only. DONT WRITE ANYTHING ELSE and If there is unfamiliar language, you will write Unfamiliar Language"""
+    Please respond with the category name only. DONT WRITE ANYTHING ELSE and If there is unfamiliar language, you will write Unfamiliar Language"""
     pyperclip.copy(prompt)
     time.sleep(1.0)
     pyautogui.hotkey("ctrl", "v")
@@ -58,8 +58,9 @@ def classify_dealership_visit(transcript, instructions):
     chrome.minimize()
     copied_text = pyperclip.paste()
     copied_text = next((line.strip() for line in copied_text.splitlines() if line.strip()), "")
-
-    return VISIT_CATEGORIES[copied_text], copied_text
+    new_text = re.sub(r'^\d, ', '', copied_text)
+    print(new_text)
+    return VISIT_CATEGORIES[new_text], new_text
 
 def cleanup_files():
     files_to_delete = ['transcript.txt', 'audio1.mp3', 'audio1.wav']
