@@ -15,6 +15,12 @@ VISIT_CATEGORIES = {
     "Unfamiliar Language": 6
 }
 
+def log_case(transcript, option_number, category):
+    with open("dsv_log.txt", "a", encoding="utf-8") as f:
+        f.write("==== NEW TRANSCRIPT ====\n")
+        f.write(f"Transcript:\n{transcript.strip()}\n")
+        f.write(f"Result: [{option_number}] {category}\n\n")
+
 def classify_dealership_visit(transcript, instructions):
     # Focus ChatGPT tab and send
     chrome_window = [w for w in gw.getWindowsWithTitle("Review") if "Chrome" in w.title]
@@ -135,6 +141,7 @@ with open("transcript.txt", "r", encoding="utf-8") as f:
 option_number, category = classify_dealership_visit(transcript, instructions)
 if option_number:
     print(f"🧠 Classification: [{option_number}] {category}")
+    log_case(transcript, option_number, category)
     select_option_on_screen(option_number)
     cleanup_files()
 else:
