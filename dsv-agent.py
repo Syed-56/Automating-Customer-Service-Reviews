@@ -87,7 +87,7 @@ def main_loop():
             break
         time.sleep(1)
 
-        success3 = run_script("DSV-select_option.py")
+        success3 = run_script("practice-dsv.py")
         if not success3:
             break
 
