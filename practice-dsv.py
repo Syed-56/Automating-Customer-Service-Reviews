@@ -18,6 +18,7 @@ def log_case(transcript, option_number, category):
         f.write("==== NEW TRANSCRIPT ====\n")
         f.write(f"Transcript:\n{transcript.strip()}\n")
         f.write(f"Result: [{option_number}] {category}\n\n")
+        print("Stored Data in Log File")
 
 def has_visit_intent(transcript: str) -> bool:
     visit_phrases = [
