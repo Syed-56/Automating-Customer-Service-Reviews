@@ -16,11 +16,18 @@ VISIT_CATEGORIES = {
 }
 
 def log_case(transcript, option_number, category):
-    with open("dsv_log.txt", "a", encoding="utf-8") as f:
+    #Create a unique filename using timestamp
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    filename = f"dsv_logs/log_{timestamp}.txt"
+
+    # Make sure the directory exists
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+
+    # Write to the file
+    with open(filename, "w", encoding="utf-8") as f:
         f.write("==== NEW TRANSCRIPT ====\n")
         f.write(f"Transcript:\n{transcript.strip()}\n")
         f.write(f"Result: [{option_number}] {category}\n\n")
-        print("Stored Data in Log File")
 
 def classify_dealership_visit(transcript, instructions):
     # Focus ChatGPT tab and send
