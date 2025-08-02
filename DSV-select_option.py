@@ -5,6 +5,7 @@ from pathlib import Path
 import time
 import pyperclip
 import os
+import datetime
 
 VISIT_CATEGORIES = {
     "Yes, at a specific time or range of time within 1 hour": 1,
