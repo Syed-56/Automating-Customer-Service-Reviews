@@ -114,9 +114,6 @@ def select_option_on_screen(option_number: int):
         pyautogui.hotkey('f5')
 
     if option_number == 6:
-        pyautogui.moveTo(948, 639)
-        pyautogui.click()
-        print("✅ Selected: Unfamiliar Language")
         pyautogui.hotkey('f5')
 
         

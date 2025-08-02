@@ -168,9 +168,6 @@ def select_option_on_screen(option_number: int):
         pyautogui.hotkey('f5')
 
     if option_number == 6:
-        pyautogui.moveTo(948, 639)
-        pyautogui.click()
-        print("✅ Selected: Unfamiliar Language")
         pyautogui.hotkey('f5')
 
     pyautogui.click()
@@ -196,5 +193,5 @@ option_number, category = classify_dealership_visit(transcript)
 log_case(transcript, option_number, category)
 print(f"Classification: [{option_number}] {category}")
 cleanup_files()
-select_option_on_screen(6)
+select_option_on_screen(option_number)
 time.sleep(5.0)
