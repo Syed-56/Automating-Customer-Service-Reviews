@@ -164,11 +164,14 @@ def select_option_on_screen(option_number: int):
         pyautogui.moveTo(x_start, y_start)
         time.sleep(0.05)
 
+    if option_number == 5:
+        pyautogui.hotkey('f5')
+
     if option_number == 6:
         pyautogui.moveTo(948, 639)
         pyautogui.click()
         print("✅ Selected: Unfamiliar Language")
-        return
+        pyautogui.hotkey('f5')
 
     pyautogui.click()
     print("✅ Option selected.")
@@ -187,11 +190,11 @@ def select_option_on_screen(option_number: int):
 
 # === Main Workflow ===
 with open("transcript.txt", "r", encoding="utf-8") as f:
-    transcript = f.read()
+   transcript = f.read()
 
 option_number, category = classify_dealership_visit(transcript)
 log_case(transcript, option_number, category)
 print(f"Classification: [{option_number}] {category}")
 cleanup_files()
-select_option_on_screen(option_number)
+select_option_on_screen(6)
 time.sleep(5.0)
