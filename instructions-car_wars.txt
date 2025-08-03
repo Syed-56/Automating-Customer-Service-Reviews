@@ -1,0 +1,40 @@
+Category Instructions: Car Wars: Outbound Appointment Outcome
+The purpose of the category Car Wars: Outbound Appointment Outcome is to determine if the customer agreed to come into the dealership.
+
+
+Helpful terms/information
+
+Connected: A call is considered Connected if the caller reaches the intended party or a qualified individual who handled the call on behalf of the intended party. This is true even if the call drops or disconnects after the caller reaches the intended party. Calls may also be considered connected if the call is successfully handled by an interactive system or auto-attendant. These types of calls will sound like interactive recordings that ask questions or request information and require the caller to interact by making phone selections.
+
+Not Connected: A call is considered Not Connected if the caller does not reach the intended party or a qualified individual who handled the call on behalf of the intended party. Not Connected calls often consists of live messages, voicemail being reached, wrong numbers, short recordings with unidentifiable audio, or only ringing. Not Connected calls should be reviewed as "Correction: this call was not related to the buying, selling, trading, or test driving of a vehicle."
+
+One-sided calls: For some Outbound calls, you may only hear the caller's voice. This is by design. These calls should be reviewed the same as calls where you can hear both parties. Please review them based on the following instructions and the content you can hear from the one side of the conversation.
+
+Here are the options:
+
+Yes: customer agreed to come to the dealership
+Select this option if the agent is placing the call to determine if the intended party wants to buy, sell, trade, or test drive a vehicle and an appointment was set for a firm date and time.
+Example call - Agent: "I saw that you may be interested in a new SUV. Could we get you to come down and check out what we have on the lot?" / Intended party: "Yes, I was planning on coming out today at 3:00."
+Select this option if the agent is placing the call to determine if the intended party wants to buy, sell, trade, or test drive a vehicle and an appointment was set for a loose date or timee.
+Example call - Agent: "I was calling to see if you are still looking for a new truck. Would you want to come look at the new F150 we just go in?" / Intended party: "I could probably come out tomorrow afternoon."
+Select this option if the agent is placing the call to determine if the intended party wants to buy, sell, trade, or test drive a vehicle, and the agent is informed that the intended party already has an upcoming appointment scheduled for sales.
+This is not the same as an agent calling to discuss an existing appointment, because the agent was unaware of the existing appointment when they placed the call.
+No: customer is no longer in the market to buy a car
+Select this option if the agent is placing the call to determine if the intended party wants to buy, sell, trade, or test drive a vehicle but the customer is no longer in the market, already sold or purchased a vehicle, or no longer has the vehicle of interest to trade.
+Select this option if the agent is placing the call to determine if the intended party wants to buy, sell, trade, or test drive a vehicle but the intended party hangs up before sharing whether or not he or she is interested.
+Example call - Agent: "Hi, our system shows that you were previously in the market for a new car. / Intended party: "I'm no longer in the market. Thanks."
+Select this option if the agent is placing the call to determine if the intended party wants to buy, sell, trade, or test drive a vehicle but the intended party says they are not currently in the market.
+No: customer possibly still in market but didn't agree to come in
+Select this option if the agent is placing the call to determine if the intended party wants to buy, sell, trade, or test drive a vehicle but there was no invitation by agent or caller to visit the dealership.
+Example call - Agent: "I am calling to see if you are still looking to purchase a new vehicle." / Intended party: "Yes, we have decided that we would like a black 2013 Jeep." // "We have some new Jeeps in stock. Let me take a look to see if we have something that fits your needs, and I can give you a call back."
+Select this option if the agent is placing the call to determine if the intended party wants to buy, sell, trade, or test drive a vehicle but the interested party declined an appointment request.
+Example call - Agent: "We see that you were recently looking for a RAV4. Are you interested in visiting the dealership to see the two that we just got in?" / Intended party: "I don't really have time to make it out there anytime soon."
+Select this option if the agent is placing the call to determine if the intended party wants to buy, sell, trade, or test drive a vehicle and the customer is still in the market but wants a newer model that has not been released yet or the vehicle of interest is not currently ready or available.
+Select this option if the agent is placing the call to determine if the intended party wants to buy, sell, trade, or test drive a specific vehicle or vehicles, and the intended party is still in the market for a vehicle but just not interested in the specific vehicle discussed during the call.
+This is not the same as an individual making it clear that they are no longer in the market for a vehicle at all. Remember that you are trying to determine if the caller is interested in buying, selling, trading, or test driving any vehicle at all, not just a specific vehicle.
+This is not the same as someone indicating they will not be working with the dealership that has contacted them. Remember, you are only trying to determine if the individual is in the market, not if they are in the market with the dealership that has contacted them. If they intend to buy, sell, trade, or test drive a vehicle, regardless of where, they are considered in the market.
+Correction: call was not about buying/selling/trading/test driving a vehicle
+You can reference the instructions for the upstream category Reason for Outbound Call if you need assistance in understanding what qualifies as an agent calling to discuss buying/selling/trading/test driving a vehicle.
+Unfamiliar Language
+Select this option if the call is in any language that you are unfamiliar with and unqualified to review.
+This option is not intended for calls that contain no spoken words.
