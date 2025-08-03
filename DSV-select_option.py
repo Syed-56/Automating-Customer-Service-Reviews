@@ -120,9 +120,11 @@ def select_option_on_screen(option_number: int):
 
     if option_number == 5:
         pyautogui.hotkey('f5')
+        return
 
     if option_number == 6:
         pyautogui.hotkey('f5')
+        return
 
     pyautogui.click()
     print("✅ Option selected.")
