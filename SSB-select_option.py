@@ -5,15 +5,33 @@ from pathlib import Path
 import time
 import pyperclip
 import os
+import datetime
 
 VISIT_CATEGORIES = {
-    "Yes, at a specific time or range of time within 1 hour": 1,
-    "Yes, at a loose time or range of time exceeding 1 hour": 2,
-    "No, visit requested/mentioned but no agreement": 3,
-    "No, a new visit was not discussed": 4,
-    "Correction: not an inventory sales conversation": 5,
-    "Unfamiliar Language": 6
+    "Specific appointment or walk-in time / range within 1 hour" : 1,
+    "Unscheduled walk-in or loose appointment time / range exceeding 1 hour": 2,
+    "Appointment requested/mentioned but not set": 3,
+    "No appointment, walk-in, or drop-off discussed": 4,
+    "Upcoming scheduled appointment": 5,
+    "Vehicle already in service": 6,
+    "Not an appointment opportunity": 7,
+    "Correction: caller never connected to a live, qualified agent": 8,
+    "Unfamiliar Language": 9
 }
+
+def log_case(transcript, option_number, category):
+    #Create a unique filename using timestamp
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    filename = f"ssb_logs/log_{timestamp}.txt"
+
+    # Make sure the directory exists
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+
+    # Write to the file
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write("==== NEW TRANSCRIPT ====\n")
+        f.write(f"Transcript:\n{transcript.strip()}\n")
+        f.write(f"Result: [{option_number}] {category}\n\n")
 
 def classify_dealership_visit(transcript, instructions):
     # Focus ChatGPT tab and send
@@ -103,11 +121,11 @@ def select_option_on_screen(option_number: int):
         pyautogui.moveTo(x_start, y_start)
         time.sleep(0.05)
 
-    if option_number == 6:
-        pyautogui.moveTo(948, 639)
-        pyautogui.click()
-        print("✅ Selected: Unfamiliar Language")
-        return
+    if option_number == 8:
+        pyautogui.hotkey('f5')
+
+    if option_number == 9:
+        pyautogui.hotkey('f5')
 
     pyautogui.click()
     print("✅ Option selected.")
@@ -135,7 +153,8 @@ with open("transcript.txt", "r", encoding="utf-8") as f:
 option_number, category = classify_dealership_visit(transcript, instructions)
 if option_number:
     print(f"🧠 Classification: [{option_number}] {category}")
-    #select_option_on_screen(option_number)
+    select_option_on_screen(option_number)
+    log_case(transcript, option_number, category)
     cleanup_files()
 else:
     print("❌ Skipping due to invalid classification.")
@@ -151,3 +170,4 @@ else:
         exit()
     
     cleanup_files()
+

@@ -2,7 +2,10 @@ import subprocess
 import time
 import os
 import requests
-import keyboard  # pip install keyboard
+import keyboard
+import pyautogui
+import pygetwindow as gw
+
 
 MAX_CALLS = 5
 call_count = 0
@@ -40,6 +43,25 @@ def read_classification():
         return result
     except FileNotFoundError:
         return ""
+
+def return_to_main_menu():
+    chrome_windows = [w for w in gw.getWindowsWithTitle("Review") if "Chrome" in w.title]
+    if not chrome_windows:
+        print("❌ No Chrome window with 'Review' in title found.")
+        return
+
+    chrome = chrome_windows[0]
+    if chrome.isMinimized:
+        chrome.restore()
+    chrome.activate()
+    chrome.maximize()
+    time.sleep(1.5)
+
+    # Move and click Main Menu or any UI control
+    pyautogui.moveTo(205, 114)
+    pyautogui.scroll(1000)
+    pyautogui.click()
+    print("🏠 Returned to Main Menu.")
 
 def main_loop():
     global call_count
@@ -89,3 +111,5 @@ if __name__ == "__main__":
         main_loop()
     except KeyboardInterrupt:
         print("\n⏹️ Stopped by user.")
+
+return_to_main_menu()
