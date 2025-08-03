@@ -132,7 +132,8 @@ def select_option_on_screen(option_number: int):
 
     time.sleep(2.0)
 
-    submit_x, submit_y = 931, 700
+    submit_x, submit_y = 931, 541
+    pyautogui.scroll(-1000)
     pyautogui.moveTo(submit_x, submit_y)
     pyautogui.click()
     time.sleep(5.0)
@@ -170,4 +171,3 @@ else:
         exit()
     
     cleanup_files()
-

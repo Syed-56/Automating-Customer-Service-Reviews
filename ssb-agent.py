@@ -7,7 +7,7 @@ import pyautogui
 import pygetwindow as gw
 
 
-MAX_CALLS = 5
+MAX_CALLS = 1
 call_count = 0
 
 def is_connected():
