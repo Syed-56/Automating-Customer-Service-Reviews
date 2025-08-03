@@ -1,4 +1,4 @@
-# 🧠 Humanatic Call Review Automation (Demo Project)
+# 🧠 Customer Call Review Automation (Demo Project)
 
 This is a Python-based demo automation system designed to simulate the Humanatic call review process. It automates reviewing calls using audio transcription, classification, and GUI interactions. The tool is intended strictly for educational and research purposes, not for commercial use.
 
