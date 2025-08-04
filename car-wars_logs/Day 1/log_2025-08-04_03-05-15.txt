@@ -1,0 +1,14 @@
+==== NEW TRANSCRIPT ====
+Transcript:
+Hi, is this Louis?
+Hey, this is Louis and I give you a call from Super Thousand.
+So are you.
+Wonderful.
+I was just freaking out.
+Are you in the market for a vehicle right now?
+Maybe a forester hybrid?
+Okay, Stan.
+How can I help you?
+Did you want to...
+Result: [3] No: customer possibly still in market but didn't agree to come in
+

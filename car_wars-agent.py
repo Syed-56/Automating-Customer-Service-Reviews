@@ -6,7 +6,7 @@ import keyboard
 import pygetwindow as gw
 import pyautogui
 
-MAX_CALLS = 1
+MAX_CALLS = 200
 call_count = 0
 
 def is_connected():

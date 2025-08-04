@@ -1,0 +1,14 @@
+==== NEW TRANSCRIPT ====
+Transcript:
+Hello, I'm Sethi.
+Hi, this is Judith Colle, you from Aaron Automotive in Norco.
+How are you doing today?
+I'm doing great thing for asking.
+I was calling you because if you're online request from a car,
+you're interested in our 2019 Honda Accord.
+Oh, you've already purchased?
+Okay, well, thank you so much for letting me know.
+Congratulations.
+Bye-bye.
+Result: [2] No: customer is no longer in the market to buy a car
+

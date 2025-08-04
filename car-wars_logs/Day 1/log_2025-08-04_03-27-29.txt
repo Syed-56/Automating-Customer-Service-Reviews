@@ -1,0 +1,7 @@
+==== NEW TRANSCRIPT ====
+Transcript:
+Yes, may I speak to Daniel?
+Yes, Daniel, my name is Mario, I'm calling you from Claremont, Toriota.
+We're just trying to see if you're still interested in the tendercy.
+Result: [3] No: customer possibly still in market but didn't agree to come in
+

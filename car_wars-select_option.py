@@ -9,7 +9,7 @@ import datetime
 
 VISIT_CATEGORIES = {
     "Yes: customer agreed to come to the dealership": 1,
-    "YNo: customer is no longer in the market to buy a car": 2,
+    "No: customer is no longer in the market to buy a car": 2,
     "No: customer possibly still in market but didn't agree to come in": 3,
     "Correction: call was not about buying/selling/trading/test driving a vehicle": 4,
     "Unfamiliar Language": 5
