@@ -1,0 +1,101 @@
+The purpose of the category Dealership Sales Visit is to determine if the agent or caller attempted to schedule a visit to the dealership.
+
+Helpful terms/information
+
+Qualified agent: An employee that is able to assist a caller with his or her inquiry. The qualified employee may at times need to call back in order to provide an answer or solution. As long as the same employee is the one intending to return the call, it is still considered connected.
+
+Unqualified agent: An employee that is not able to assist the caller with his or her inquiry. A caller may reach an unqualified employee and hold a conversation, but it is not considered a connected call unless the caller is connected to someone who can assist him or her with their inquiry. If the call does not connect to a live, qualified employee or if the call connection is lost before contact information is shared or an appointment is discussed, the correction option should be chosen and the recap box should be left untouched.
+
+Inventory discussion: The caller should be seeking to purchase, lease, or trade-in a vehicle for the call to be considered an inventory conversation. If it is not a conversation about inventory, the correction option should be chosen and the recap box should be left untouched.
+
+Optional recaps: Recaps can be provided in the text box found under the audio on the left side of the screen. The recap text box will only be shown for calls that need a recap. Providing a recap is optional but you will earn more if you choose to provide one. Recaps should not be provided for non-inventory calls that are reviewed as 'Correction: not an inventory conversation'.
+
+Instructions
+
+Select an option that answers the question "Did the caller agree to a new visit to the dealership?"
+
+(Optional) Provide a recap for inventory discussion conversations by completing the provided sentence prompts found in the text box beneath the call audio.
+
+Include the caller's main purpose for calling.
+
+Include specific details about the caller's main purpose for calling.
+
+Vehicle information such as the make, model, mileage, and price, as well as where the automobile was seen, if possible
+
+If specific details are not provided, describe the general details.
+
+Include specific details about the agent's response to the caller's main purpose for calling.
+
+Include a short summary of how the call concluded.
+
+All appointment outcome details should be included in the recap. If an appointment is not discussed, the summary should state that an appointment was not discussed.
+
+Here are the options:
+Yes, at a specific time or range of time within 1 hour
+Caller agreed to visit the dealership at a specific date and time
+Example: "I'm going to come in and take a look at 4:00"
+Example: "I'll stop by around 3:00 on Saturday"
+Example: "My husband will probably be there around 10:00"
+Example: "I'll try to go test drive it at noon"
+Example: "I'm on my way right now, and I'll be there in just a few minutes"
+Caller has estimated an amount of time it will take for him or her to arrive, and it falls within a one hour range of time.
+Example: "I'll come down in 30 minutes if it's still on the lot" | Agent: "I'll check and call you right back"
+Caller agreed to a visit within a one hour range of time
+Example: "Yeah, I'll be there in about half an hour"
+Example: "Yeah, I'll be there in 45-60 minutes"
+45-60 minutes is a 15 minute window of time which is within an hour range.
+Caller agreed to a visit for a loose time, but the agent set it for a firm time.
+Example: "I can probably be there between 6:00 and 8:00" / "Ok, I'll put you down for 7:00 then"
+Caller is an unscheduled walk-in who is already on the lot
+Yes, at a loose time or range of time exceeding 1 hour
+Caller agreed to a visit for a soft date and time
+Example: "I'll stop by sometime today"
+Example: "My wife will go there Saturday"
+Example: "I might be there to test drive it this evening"
+Example: "I get off work 5:00 and I'll come by after that"
+Example: "I'll get there sometime before 3:00"
+Before 3:00 represents any time leading up to 3:00.
+Example: "I'm heading your way now"
+Unless the caller specifies how long it will take for him or her to arrive, we cannot assume this information, and it cannot be assumed that it will fall within a one hour range of time.
+Caller agreed to visit the dealership, but the caller approximates a time frame that is longer than a one hour range
+Example: "I'll be there tonight between 7:00 and 9:00"
+Caller says he or she will be coming in to take a look but did not specify when
+Example: "I'll come by"
+Example: "I'll try and stop by soon"
+Caller expressed intent to visit the dealership even if follow up information is needed first
+In each of the following examples, you can identify both the caller’s interest and intent to visit the dealership. All of these examples show a caller’s clear intent to visit, regardless of the follow up information that is wanted or needed.
+Example: "I'm going to come down this weekend, but before I do, will you send me some additional pictures of that truck?"
+Example: "If you can get your manager to bring that price down, I'll come in tonight"
+Example: "I will come down tonight if it's still available" | Agent: "Let me check to see if it's still available, and I'll call you back"
+Caller agreed to a possible visit
+Example: "Maybe I'll come take a look at it later"
+Example: "I'll go take a look at it if I get a chance"
+Example: "If I get off work early, I'll stop in"
+Example: "If I don't find anything else, I'll swing by this weekend"
+No, visit requested/mentioned but no agreement
+Agent requested/mentioned the caller visiting the dealership but the caller did not respond to what was requested/mentioned
+Caller declined the agent's request for him or her to visit the dealership
+Caller expressed an interest but did not express intent to visit the dealership
+Caller expressed an interest in visiting the dealership, but some part of the conversation nullified the caller’s want or need to visit
+There is a big difference between a caller’s interest and intent. In the following example, you will see that the caller expressed an interest in visiting the dealership, but she did not state an agreed intent to actually visit, nor did she express the probability or possibility of a visit. Instead, she clearly states that "if" they even decide to agree to a visit, she will let the agent know. In this example, you can identify the fact that she has not decided or agreed to a visit. Only interest was expressed, no intent.
+Example: "I want to come out, but I need to talk to my husband first, and if we decide to we'll let you know"
+Example: "I saw a car I'm interested in on your website, and I was thinking of coming down this weekend if it has everything I'm looking for" | Caller and agent discuss the vehicle, and they find the caller is not interested because of the vehicle's condition | No further information discussed, and no visit agreed to since it is no longer needed or wanted
+Example: "I saw a car I'm interested in on your website, and I was thinking of coming down this weekend if it has everything I'm looking for" | Caller and agent discuss the vehicle, and they find the caller is not interested because of the vehicle's condition | No further information discussed, and no visit agreed to since it is no longer needed or wanted
+No, a new visit was not discussed
+Caller represented an inventory sales opportunity, but no visit to the dealership was requested/mentioned
+Agent asked the caller's location but no visit to the dealership was requested/mentioned
+Caller mentions he lives out of state and no visit to the dealership was requested/mentioned
+Caller asks about delivery/shipping but no visit to the dealership was requested/mentioned
+Caller clearly mentioned that he or she already has an existing visit scheduled and he or she is now calling to discuss additional details or reschedule the upcoming appointment
+For it to be considered an existing appointment, the caller should clearly indicate that he or she already has an existing visit scheduled
+Example: "I have an appointment set for 1:00 today, but I was wondering if you could give me a few more details about that car"
+Example: "I'm scheduled to come down this afternoon, but I have a few more questions before I test drive the car"
+Example: "I'm supposed to meet with my sales agent today to look at that truck"
+There is a difference between a clearly established existing appointment and someone simply claiming that they were already planning to come in.
+NOT an existing appointment: "I am coming down today and I had a few questions about the car I'm coming to see"
+NOT an existing appointment: "I was planning to be there this morning but I was wondering if you could give me a few more details about the van"
+Correction: not an inventory sales conversation
+Call does not represent an inventory sales opportunity for buying, selling, or trading in a vehicle
+You can reference the instructions for the upstream category Inventory Discussion+ if you need assistance in understanding what qualifies as an inventory sales conversation
+Caller mentioned that he or she already has an existing visit scheduled, but he or she is canceling because they are no longer in the market
+Call was not handled by a live, qualified employee/agent

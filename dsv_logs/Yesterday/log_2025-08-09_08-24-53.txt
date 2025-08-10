@@ -1,0 +1,7 @@
+==== NEW TRANSCRIPT ====
+Transcript:
+Thank you for coming back to the system now and we're going to have you.
+I'm going to use a phone, my name is, I'm going to use a phone.
+You want to talk to Ashley?
+Result: [4] No, a new visit was not discussed
+
