@@ -1,0 +1,58 @@
+// ==UserScript==
+// @name         Humanatic Audit Audio Opener
+// @namespace    http://tampermonkey.net/
+// @version      2.1
+// @description  Open Humanatic audit call audio in a new tab
+// @match        https://www.humanatic.com/*
+// @grant        none
+// ==/UserScript==
+
+(function () {
+    'use strict';
+
+    function checkAudio() {
+        let audio = document.querySelector('audio');
+
+        if (audio && audio.src) {
+            addOpenButton(audio.src);
+        } else {
+            let sources = [...document.querySelectorAll('source')];
+            for (let s of sources) {
+                if (s.src) {
+                    addOpenButton(s.src);
+                    return;
+                }
+            }
+        }
+    }
+
+    function addOpenButton(url) {
+        if (document.getElementById("open-audio-btn")) return;
+
+        let btn = document.createElement("button");
+        btn.id = "open-audio-btn";
+        btn.innerText = "▶️ Open Call Audio";
+
+        btn.style.cssText = `
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            background: #0070f3;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            z-index: 999999;
+        `;
+
+        btn.addEventListener("click", () => {
+            window.open(url, "_blank");
+        });
+
+        document.body.appendChild(btn);
+    }
+
+    setInterval(checkAudio, 2000);
+})();
