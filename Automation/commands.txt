@@ -1,0 +1,8 @@
+For Outputting dsv_agent.py:-
+powershell -Command "Get-Content ssb-agent.py -TotalCount 10"
+
+For Changing Call Amount:-
+powershell -Command "(Get-Content ssb-agent.py) -replace '^MAX_CALLS\s*=\s*\d+', 'MAX_CALLS = 20' | Set-Content ssb-agent.py"
+
+For Counting Call Amount:-
+dir /b | find /c /v ""

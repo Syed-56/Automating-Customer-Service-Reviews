@@ -1,0 +1,106 @@
+The purpose of the category Service Setter Booked is to determine if the caller represents a service appointment opportunity and if an appointment was booked during the call.
+
+Helpful information:
+Qualified agent: An employee that is able to assist a caller with his or her inquiry. The qualified employee may at times need to call back in order to provide an answer or solution. As long as the same employee is the one intending to return the call, it is still considered connected.
+Unqualified agent: An employee that is not able to assist the caller with his or her inquiry. A caller may reach an unqualified employee and hold a conversation, but it is not considered a connected call unless the caller is connected to someone who can assist him or her with their inquiry.
+Appointment opportunity: Connected calls about potential maintenance or repair service(s) the shop can perform, repair or installation of a part that the shop can perform, or confirmed open recalls that the service shop can perform.
+Service opportunities include but are not limited to:
+Oil changes
+Fluid flushes
+Key programming / key cutting / key battery replacement
+Part installation
+Tire installation
+Battery installation
+Car detailing
+Call types that should NOT be considered service:
+Body work or collision repair
+Car washes
+Finance, sales, etc.
+Interactive systems and auto-attendants: Calls handled by an interactive system or auto-attendant will sound like interactive recordings that ask questions or request information and require the caller to interact by making phone selections. When a call is successfully handled by an interactive system or auto-attendant it should be considered a connected call, and proper review selections should be made according to the content and outcome of the call. When a caller leaves a call back number with the interactive system, instead of successfully handling their inquiry or need, then the call should be considered not connected.
+
+Reminders:
+Calls in this category need to be reviewed based on this category's instructions. Overview instructions for other appointment related categories do not apply to this category.
+The service appointment time should be considered the time the vehicle can be serviced.
+Here are the options:
+
+Opt 1) "Specific appointment or walk-in time / range within 1 hour"
+Caller agrees to an appointment with a specific date and time.
+Example call - Caller: "I need a tune-up."// Receptionist or agent: "We can fit you in at 11:45 tomorrow morning."// Caller: "Perfect. I'll see you then!"// Call ends.
+Caller approximates a loose time range, but the agent puts down a firm time for the appointment. In these instances, the agent’s statement trumps the caller's.
+Example - Caller: "I can be there between 2:00 and 4:00." // Agent: "I'll put you down for 3:00, and then if you show up a little earlier or later, that's fine."
+Caller agrees to an appointment with a specific date and time but plans to drop the vehicle off before the scheduled appointment.
+Example call - Caller: "I need an oil change."// Agent: "I will schedule you for 10:00 AM tomorrow."// Caller: "Can I drop my car off before my appointment?" // Agent: "Yes, you can drop your car off any time, and just leave your keys in the drop box."// Caller: "Great, thanks!" // Call ends.
+Caller agrees to an approximate time within a 1 hour time range because they are able to be serviced at the time of arrival.
+A walk-in time within an hour range, for a vehicle that can be serviced immediately, should be considered a specific appointment time. This is true because, even if an appointment is not put on the schedule, the service shop has an expected arrival time for the caller and the service can be completed at that arrival time.
+Example call - Caller: "I need to get my brakes repaired. Do you have any openings today?"// Agent: "You can come in now if you'd like"// Caller: "Great! I'll be there in half an hour." // Call ends.
+Example call - Caller: "My car is being towed there right now and should be there in about 20 minutes. Can it be looked at right away?" // Agent: "Yeah, that's no problem. We'll look at it as soon as it arrives."
+Caller agrees to an approximate time of "around 1 hour".
+Caller discusses an existing appointment and agrees to a new appointment during the same call.
+Example call - Caller: "I'm checking on the status of my car that's in service, and I also wanted to know if I could bring my wife's car in for an oil change."// Agent: "Your car is ready to be picked up, we can get your wife's car in at 4:00 if that time works for you."// Caller: "That works. We'll be there at 4:00."
+
+Opt 2) "Unscheduled walk-in or loose appointment time / range exceeding 1 hour"
+Caller gives a vague agreement to possibly come in.
+Example call - Caller: Do you have availability tomorrow morning. // Agent: "Yes, we're pretty open all morning." // Caller: "Okay, I may drop it off in the morning." // Call ends.
+Caller agrees to come in but approximates a time range that exceeds 1 hour.
+Example call - Caller: "I'll be there in about 2 hours."
+Caller agrees to come in before or after a specific time.
+Example call - Caller: "I can be there sometime before 4:00 PM."
+In this example, the caller could be there anytime before 4:00, making this a loose appointment time.
+Example call - Caller: "I won't be able to get there until after 5:00."
+In this example, the caller could be there anytime after 5:00.
+Receptionist or agent tells the caller that it is first come, first served and the caller says "OK."
+Example call - Caller: "Do I need an appointment for an oil change?"// Receptionist or agent: "It is first come, first served."// Caller acknowledges this and the call ends.
+Caller agrees to be an unscheduled walk-in.
+Example call - Caller - "Do you accept walk-ins?" // Agent: "We'll be accepting walk-ins all day Saturday." // Caller: "I'll be there sometime Saturday then!"
+Caller agrees to come in at a certain time but no appointment time is guaranteed.
+A walk-in time within an hour range, that can be serviced immediately, is a specific appointment time. However, a specific walk-in time with no specific service time cannot be considered a specific appointment, because the vehicle cannot be serviced immediately upon arrival. In the following example, the caller gives a specific arrival time, but the service time cannot be set for a specific time. Thus, it is a soft appointment time.
+Example call - Caller: "I need to get my car serviced as soon as possible." // Agent: "We're all booked through the whole week." // Caller: "Can I just come in and have my car serviced between other appointments?" // Agent: "You can come in and possibly have your car serviced if they have time, but we cannot guarantee a service time and you may be here for a few hours." // Caller: "I'll just get there when you open tomorrow at 8:00, and I'll wait."
+Caller is having his or her vehicle towed in but no appointment time is guaranteed.
+Receptionist or agent tells the caller that no appointment is necessary, they can just show up.
+Example call - Caller: "Can I get my tire rotated today?" // Receptionist or agent: "Absolutely. You don't need an appointment. Just come on in."// Caller acknowledges this and the call ends.
+The time of the visit or walk-in is for a window of time that exceeds 1 hour.
+Example call - Caller: "My check engine light is on and I'd like to come in to have it checked out." // Agent: "No problem. Can you come in today? We have openings after 12pm" // Caller: "Yeah, I'll be there between 12:30 and 2:30." // Call ends.
+Caller agrees to drop off his or her vehicle for an unscheduled appointment time.
+Example call - Caller: "Can I get my car in for service tomorrow?" // Agent: "What time do you need it done?" // Caller: "Anytime is fine. I'll just drop it off at 7:00 and leave it there for the day." // Agent: "Great, we'll get it done before the end of the day."
+
+Opt 3) "Appointment requested / mentioned but not set"
+Caller asked about a service appointment but did not agree to an appointment.
+Example call - Caller: "I need to bring my car in for some routine service."// Receptionist or agent: "We can fit you in tomorrow morning."// Caller: "That won't work for me. I need to get it serviced today." // Call ends.
+Example call - Caller: "I want to get my motor oil replaced. How much do you charge for that?" // Price is provided and appointment requested. // Caller: "Oh, that's too much. I'm not interested. Thanks."
+
+Opt 4) "No appointment, walk-in, or drop-off discussed"
+Caller is asking about a service or there was an opportunity to book an appointment but no appointment, walk-in, or drop-off was discussed.
+Example call - Caller: "Does your service department do oil changes?"// Receptionist or agent: "Yes"// Caller: "Thanks." // Call ends.
+Example call - Caller: "I want to get my fluids flushed and replaced. How much do you charge for that?" // Only the price is provided and NO potential appointment is mentioned. // Caller: "Oh, that's too much. I’m not interested. Thanks."
+
+Opt 5) "Upcoming scheduled appointment"
+Caller discusses an existing appointment already scheduled for an upcoming time and/or date.
+Caller cancels or reschedules an appointment that was already scheduled for an upcoming time and/or date.
+
+Opt 6) "Vehicle already in service"
+Caller discusses or asks about the status of a vehicle already in service.
+Caller adds services to a vehicle already in service.
+
+Opt 7) "No, not an appointment opportunity"
+Call is general conversation, a personal call, or employee-to-employee conversation and no appointment opportunity exists.
+The service requested is not offered by the dealership/shop/business.
+Caller asks if there are any recalls and is told there are no open recalls.
+Caller asks if vehicle is due for service and is told the vehicle is not due for service.
+Call is about parts only and there is no service mentioned.
+Caller is only discussing a bill without any discussion of services.
+Caller is only asking about a car wash without any discussion of services.
+Caller asks how to service something on their own and services are not needed from the service shop.
+Example: "Can you tell me how to reset the code in my door panel?" // Agent provides instructions over the phone. No appointment is requested/needed.
+Call is intended for the body shop. The body shop is a separate department from service.
+Call is intended for the collision center. The collision center is a separate department from service.
+
+Opt 8) "Correction: caller never connected to a live, qualified agent"
+Caller never connected to a live, qualified agent.
+Caller is left on hold.
+Call connection was lost and no contact information was shared and/or no appointment discussion took place.
+Caller reached voicemail.
+Caller had the wrong number.
+Caller did not reach the desired person and left a live message.
+Caller did not reach the desired person and declined to leave a live message.
+Caller hung up during the bridge greeting.
+Call only consists of fax machine sounds or other similar noises.

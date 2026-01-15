@@ -1,0 +1,22 @@
+// ==UserScript==
+// @name         IB
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       Inam
+// @match        https://www.humanatic.com/pages/humfun/noCalls.cfm
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Your code here...
+    const interval = setInterval(function() {
+   // method to be executed;
+        if(window.location.href==='https://www.humanatic.com/pages/humfun/noCalls.cfm'){
+        window.location.href='https://www.humanatic.com/x19/category_selector.cfm?category=3';
+        }
+ }, 1000);
+
+})();
