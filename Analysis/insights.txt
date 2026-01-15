@@ -1,0 +1,4 @@
+Total Calls Reviewed =  12
+Appointments Conclusion:-
+ {'unsuccessful appointment': 9, 'successful appointment': 2, 'in progress': 1}
+Successful Rate of Booking New Appointments =  16.67%
