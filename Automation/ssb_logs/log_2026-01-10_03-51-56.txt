@@ -1,0 +1,48 @@
+==== NEW TRANSCRIPT ====
+Transcript:
+Thank you for contacting the service department.
+If you're calling to make an appointment,
+please visit us online at www.normaries.com forward slash service.
+To check on your vehicle status, please press 1.
+To make an appointment, please press 2.
+Please have your VIN number, current mileage, and email address ready.
+Thank you for calling Normies Service.
+And to my name is Yvonne, how can I help you?
+Hi, Yvonne.
+I just made an appointment for a little bit later this afternoon
+for a service online Honda.
+But I did have a question.
+I got a notification online, a dash that said, you know,
+it's time for service.
+But sometimes that's off a little bit from your record.
+So can you just double check and make sure it's time for me to come in?
+Yes, of course.
+Let me share with your phone number.
+6-6-0-1.
+Thank you.
+And let's see, first and lastly, on the account?
+It's either Sherry or Elise.
+Elise, I go by my middle name, Lundine, L-U-N-V-E-N.
+Thank you.
+OK.
+And then just confirm also the year and model of the vehicle.
+It's a Honda CRV 2018.
+Thank you.
+OK.
+Last time that you came in for an oil change, the vehicle was at 76,000 miles.
+What's the current mileage now?
+It's 86, 6, 3, 9.
+86, yeah, it's been 10,000 miles.
+So, yeah, it sounds about right.
+Let's get to for service.
+OK.
+OK, great.
+So I'll see you in an hour.
+Thank you.
+All right, thank you.
+We'll see you soon.
+Thank you.
+OK.
+Bye-bye.
+Result: [1] Specific appointment or walk-in time / range within 1 hour
+
