@@ -1,0 +1,13 @@
+S.No,file_name,extracted_option
+1,log_2026-01-09_22-49-03,Appointment requested/mentioned but not set
+2,log_2026-01-09_23-44-34,Not an appointment opportunity
+3,log_2026-01-10_00-08-56,Appointment requested/mentioned but not set
+4,log_2026-01-10_02-17-42,"No appointment, walk-in, or drop-off discussed"
+5,log_2026-01-10_02-19-35,Not an appointment opportunity
+6,log_2026-01-10_02-22-33,"No appointment, walk-in, or drop-off discussed"
+7,log_2026-01-10_02-53-30,Appointment requested/mentioned but not set
+8,log_2026-01-10_02-57-10,Vehicle already in service
+9,log_2026-01-10_03-15-01,Appointment requested/mentioned but not set
+10,log_2026-01-10_03-22-00,Not an appointment opportunity
+11,log_2026-01-10_03-50-13,Unscheduled walk-in or loose appointment time / range exceeding 1 hour
+12,log_2026-01-10_03-51-56,Specific appointment or walk-in time / range within 1 hour
