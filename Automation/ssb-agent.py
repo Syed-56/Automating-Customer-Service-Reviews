@@ -21,9 +21,9 @@ def get_whisper_model():
 
 def transcribe_audio(model):
     # === Paths ===
-    mp3_path = "D:/Automating-Humanatic/audio1.mp3"
-    wav_path = "D:/Automating-Humanatic/audio1.wav"
-    transcript_path = "D:/Automating-Humanatic/transcript.txt"
+    mp3_path = "D:/Data-Science-Basics/jupyterNotebook/QA-Calls-Review-Analysis/Automation/audio1.mp3"
+    wav_path = "D:/Data-Science-Basics/jupyterNotebook/QA-Calls-Review-Analysis/Automation/audio1.wav"
+    transcript_path = "D:/Data-Science-Basics/jupyterNotebook/QA-Calls-Review-Analysis/Automation/transcript.txt"
 
     FFMPEG = r"D:\ffmpeg-7.1.1-essentials_build\bin\ffmpeg.exe"
 

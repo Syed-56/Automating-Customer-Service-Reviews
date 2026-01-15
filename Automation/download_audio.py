@@ -107,7 +107,7 @@ def scroll_and_right_click_audio(chrome):
 
 def wait_for_download_and_move(timeout=DOWNLOAD_TIMEOUT, check_interval=CHECK_INTERVAL):
     downloads_dir = Path.home() / "Downloads"
-    destination_dir = Path("D:/Automating-Humanatic")
+    destination_dir = Path("D:/Data-Science-Basics/jupyterNotebook/QA-Calls-Review-Analysis/Automation")
     destination_dir.mkdir(parents=True, exist_ok=True)
     target_filename = destination_dir / "audio1.mp3"
 
